@@ -6,6 +6,13 @@ main{
     font-size: 70px;
     font-weight: 900;
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif */
+    animation: logo-pulse 2s infinite ease-in-out;
+}
+
+@keyframes logo-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 .container {
     font-family:'Roboto';
@@ -71,7 +78,25 @@ body{
 }
 #Main_Menu{
     background: #00b894;
+    position: relative;
 } 
+/* Mobile Menu Toggle Button Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+    background: #d1395a; /* Different background color */
+    width: max-content;
+    margin-left: auto;
+}
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
 #Main_Menu ul{
      margin: 0;
      padding: 0;
@@ -114,4 +139,66 @@ background: #f01111;
 }
 #Main_Menu ul ul li a:hover {
     background:#d1395a;
+}
+
+/* Responsive Nav Menu */
+@media screen and (max-width: 1024px) {
+    #Main_Menu {
+        position: static;
+    }
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #faecbe;
+        padding: 0 10px;
+        position: relative;
+    }
+    main.container {
+        background-color: transparent;
+        padding: 0;
+        height: auto;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    #Main_Menu .nav-list {
+        display: none;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        position: absolute;
+        top: 100%;
+        left: -10px;
+        right: -10px;
+        z-index: 1000;
+    }
+    #Main_Menu .nav-list.active {
+        display: flex;
+        background: #d1395a;
+    }
+    #Main_Menu li {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    #Main_Menu ul ul {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+    #Main_Menu ul li:hover ul {
+        display: block;
+    }
+    /* Toggle button animation */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
 }

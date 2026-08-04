@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="DSC_1882 0.jpg" type="image/x-icon">
   </head>
   <body>
-    <main class="container">
+    <div class="header-wrapper">
+      <main class="container">
       <!-- <img src="OIP.jpeg" alt=""> -->
       <p id="Header">DLC</p>
       <section class="animation">
@@ -21,7 +22,12 @@
       </section>
     </main>
     <nav id="Main_Menu">
-      <ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
         <li><a href="">Home</a></li>
         <li><a href="">Admission</a></li>
         <li><a href="">Notice</a></li>
@@ -44,4 +50,14 @@
         <li><a href="">Contact Us</a></li>
       </ul>
     </nav>
+    </div>
+    <script>
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navList = document.querySelector('.nav-list');
+
+      mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        mobileMenu.classList.toggle('is-active');
+      });
+    </script>
   </body>
