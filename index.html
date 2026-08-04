@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DLC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="DSC_1882 0.jpg" type="image/x-icon">
-  </head>
-  <body>
-    <div class="header-wrapper">
-      <main class="container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="DSC_1882 0.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <main class="container">
       <!-- <img src="OIP.jpeg" alt=""> -->
       <p id="Header">DLC</p>
       <section class="animation">
-        <div class="first"><div>Digital</div></div>
-        <div class="second"><div>Language</div></div>
-        <div class="third"><div>Center</div></div>
+        <div class="first">
+          <div>Digital</div>
+        </div>
+        <div class="second">
+          <div>Language</div>
+        </div>
+        <div class="third">
+          <div>Center</div>
+        </div>
       </section>
     </main>
     <nav id="Main_Menu">
@@ -31,15 +39,15 @@
         <li><a href="">Home</a></li>
         <li><a href="">Admission</a></li>
         <li><a href="">Notice</a></li>
-        <li><a href="">Service</a>
+        <li class="dropdown-parent"><a href="#">Courses &#9662;</a>
           <ul>
-            <li><a href="">Arabic Language</a></li>
-            <li><a href="">English Language</a></li>
-            <li><a href="">Kroean Language</a></li>
-            <li><a href="">Japani Language</a></li>
-            <li><a href="">Chania language</a></li>
-            <li><a href="">Spanish Language</a></li>
-            <li><a href="">Malay Language</a></li>
+            <li><a href="#">Arabic Language</a></li>
+            <li><a href="#">English Language</a></li>
+            <li><a href="#">Kroean Language</a></li>
+            <li><a href="#">Japani Language</a></li>
+            <li><a href="#">Chania language</a></li>
+            <li><a href="#">Spanish Language</a></li>
+            <li><a href="#">Malay Language</a></li>
           </ul>
         </li>
         <li><a href="">Branch</a></li>
@@ -50,14 +58,167 @@
         <li><a href="">Contact Us</a></li>
       </ul>
     </nav>
-    </div>
-    <script>
-      const mobileMenu = document.getElementById('mobile-menu');
-      const navList = document.querySelector('.nav-list');
+  </div>
 
-      mobileMenu.addEventListener('click', () => {
-        navList.classList.toggle('active');
-        mobileMenu.classList.toggle('is-active');
+  <!-- Hero Carousel Section -->
+  <section class="hero-carousel" id="hero-carousel">
+    <div class="carousel-container">
+      <!-- Slide 1: Arabic -->
+      <div class="carousel-slide active" style="background-image: url('images/arabic.png');">
+        <div class="carousel-content">
+          <h2>Arabic Language</h2>
+          <p>Master the rich and historical Arabic language with our immersive courses.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2: English -->
+      <div class="carousel-slide" style="background-image: url('images/english.png');">
+        <div class="carousel-content">
+          <h2>English Language</h2>
+          <p>Enhance your global communication skills with comprehensive English classes.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3: Korean -->
+      <div class="carousel-slide" style="background-image: url('images/korean.png');">
+        <div class="carousel-content">
+          <h2>Korean Language</h2>
+          <p>Discover the beauty of Hangul and dive into vibrant Korean culture.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4: Japanese -->
+      <div class="carousel-slide" style="background-image: url('images/japanese.png');">
+        <div class="carousel-content">
+          <h2>Japanese Language</h2>
+          <p>Learn Japanese for travel, anime, or business in a dynamic environment.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 5: Chinese -->
+      <div class="carousel-slide" style="background-image: url('images/chinese.png');">
+        <div class="carousel-content">
+          <h2>Chinese Language</h2>
+          <p>Unlock new opportunities by learning Mandarin Chinese, the language of the future.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 6: Spanish -->
+      <div class="carousel-slide" style="background-image: url('images/spanish.png');">
+        <div class="carousel-content">
+          <h2>Spanish Language</h2>
+          <p>Connect with millions worldwide by speaking fluent Spanish.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 7: Malay -->
+      <div class="carousel-slide" style="background-image: url('images/malay.png');">
+        <div class="carousel-content">
+          <h2>Malay Language</h2>
+          <p>Explore Southeast Asia through the beautiful and melodic Malay language.</p>
+          <div class="carousel-btns">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <button class="carousel-btn prev-btn">&#10094;</button>
+    <button class="carousel-btn next-btn">&#10095;</button>
+
+    <!-- Indicators -->
+    <div class="carousel-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+      <span class="dot" data-slide="5"></span>
+      <span class="dot" data-slide="6"></span>
+    </div>
+  </section>
+  <script>
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      mobileMenu.classList.toggle('is-active');
+    });
+
+    // Carousel Logic
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    function startSlideShow() {
+      slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+    }
+
+    function resetSlideShow() {
+      clearInterval(slideInterval);
+      startSlideShow();
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetSlideShow();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetSlideShow();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetSlideShow();
       });
-    </script>
-  </body>
+    });
+
+    startSlideShow();
+  </script>
+</body>
