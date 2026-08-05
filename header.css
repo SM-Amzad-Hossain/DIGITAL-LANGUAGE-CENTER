@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 main {
     background-color: var(--bg-main);
 
@@ -193,6 +198,15 @@ body {
     transform: translateY(0);
 }
 
+#Main_Menu .dropdown-parent > a i {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+#Main_Menu .dropdown-parent:hover > a i {
+    transform: rotate(180deg);
+}
+
 #Main_Menu ul li:hover a {
     background: var(--bg-nav-hover);
 }
@@ -217,7 +231,9 @@ body {
         align-items: center;
         background-color: var(--bg-nav);
         padding: 10px 15px;
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     #Header {
