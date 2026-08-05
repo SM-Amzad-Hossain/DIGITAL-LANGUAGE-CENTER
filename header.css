@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+main {
+    background-color: var(--bg-main);
+
+}
+
+#Header {
+    font-size: 70px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    animation: logo-pulse 2s infinite ease-in-out;
+}
+
+@keyframes logo-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.container {
+    font-family: 'Roboto';
+    text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
+    color: var(--text-main);
+    font-size: 2.26rem;
+    text-transform: uppercase;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation {
+    border: var(--border-anim);
+    height: 51px;
+    overflow: hidden;
+    margin-left: 1rem;
+    font-family: 'Franklin Gothic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 7s infinite;
+}
+
+.first div {
+    color: var(--color-anim1);
+    background-color: var(--bg-anim1);
+}
+
+.second div {
+    color: var(--color-anim2);
+    background-color: var(--bg-anim2);
+}
+
+.third div {
+    color: var(--color-anim3);
+    background-color: var(--bg-anim3);
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+
+    10% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: -5.62rem;
+    }
+
+    30% {
+        margin-top: -5.62rem;
+    }
+
+    40% {
+        margin-top: -11.24rem;
+    }
+
+    60% {
+        margin-top: -11.24rem;
+    }
+
+    70% {
+        margin-top: -5.62rem;
+    }
+
+    80% {
+        margin-top: -5.62rem;
+    }
+
+    90% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+/* nav */
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+}
+
+#Main_Menu {
+    background: var(--bg-nav);
+    position: relative;
+}
+
+/* Mobile Menu Toggle Button Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+    background: var(--bg-nav-hover);
+    /* Changed to --bg-nav-hover */
+    width: max-content;
+    margin-left: auto;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--text-nav);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+#Main_Menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#Main_Menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#Main_Menu li a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-nav);
+    text-decoration: none;
+}
+
+#Main_Menu li a:hover {
+    background: var(--bg-nav-hover);
+}
+
+#Main_Menu ul ul {
+    position: absolute;
+    left: 0px;
+    top: 48px;
+    background: var(--bg-submenu);
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#Main_Menu ul ul li {
+    display: block;
+}
+
+#Main_Menu ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#Main_Menu ul li:hover a {
+    background: var(--bg-nav-hover);
+}
+
+#Main_Menu ul li:hover li a {
+    background: var(--bg-submenu);
+}
+
+#Main_Menu ul ul li a:hover {
+    background: var(--bg-nav-toggle);
+}
+
+/* Responsive Nav Menu */
+@media screen and (max-width: 1024px) {
+    #Main_Menu {
+        position: static;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-nav);
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    #Header {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    main.container {
+        background-color: transparent;
+        padding: 0;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #Main_Menu .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        position: absolute;
+        top: 100%;
+        left: -10px;
+        right: -10px;
+        z-index: 1000;
+        background: var(--bg-nav-hover);
+        max-height: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    #Main_Menu .nav-list.active {
+        max-height: 600px;
+        visibility: visible;
+        opacity: 1;
+        padding: 20px;
+    }
+
+    #Main_Menu li a:hover,
+    #Main_Menu ul li:hover a {
+        background: var(--bg-submenu);
+    }
+
+    #Main_Menu ul ul li a:hover {
+        background: var(--bg-nav-hover);
+    }
+
+    #Main_Menu li {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    #Main_Menu ul ul {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(0);
+        transition: all 0.4s ease;
+    }
+
+    #Main_Menu ul li:hover ul {
+        max-height: 400px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Toggle button animation */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+
+
+}

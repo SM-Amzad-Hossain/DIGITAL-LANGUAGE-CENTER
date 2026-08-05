@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Book Library - DLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <!-- E-Book Hero -->
+  <section class="ebook-hero">
+    <h1>Digital Library</h1>
+    <p>Explore our curated collection of E-Books for 7 major languages.</p>
+    <div class="filter-tabs" id="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All Languages</button>
+      <button class="filter-btn" data-filter="arabic">Arabic</button>
+      <button class="filter-btn" data-filter="english">English</button>
+      <button class="filter-btn" data-filter="korean">Korean</button>
+      <button class="filter-btn" data-filter="japanese">Japanese</button>
+      <button class="filter-btn" data-filter="chinese">Chinese</button>
+      <button class="filter-btn" data-filter="spanish">Spanish</button>
+      <button class="filter-btn" data-filter="malay">Malay</button>
+    </div>
+  </section>
+
+
+
+  <!-- Books Grid -->
+  <section class="library-section">
+    <div class="books-grid" id="booksGrid">
+
+      <div class="book-card" data-category="arabic">
+        <div class="book-cover bg-arabic">
+          <i class="fa-solid fa-book-quran"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Arabic</span>
+          <h3>Beginner Arabic Grammar</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="english">
+        <div class="book-cover bg-english">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">English</span>
+          <h3>Advanced English Idioms</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="korean">
+        <div class="book-cover bg-korean">
+          <i class="fa-solid fa-book"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Korean</span>
+          <h3>Hangul Mastery</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="japanese">
+        <div class="book-cover bg-japanese">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Japanese</span>
+          <h3>JLPT N5 Vocabulary</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="chinese">
+        <div class="book-cover bg-chinese">
+          <i class="fa-solid fa-swatchbook"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Chinese</span>
+          <h3>HSK 1 Characters</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="spanish">
+        <div class="book-cover bg-spanish">
+          <i class="fa-solid fa-atlas"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Spanish</span>
+          <h3>Spanish Verb Tenses</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="malay">
+        <div class="book-cover bg-malay">
+          <i class="fa-solid fa-book-journal-whills"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">Malay</span>
+          <h3>Conversational Malay</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+      <div class="book-card" data-category="english">
+        <div class="book-cover bg-english">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <div class="book-info">
+          <span class="book-lang">English</span>
+          <h3>IELTS Preparation Guide</h3>
+          <a href="#" class="btn btn-primary">Read Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

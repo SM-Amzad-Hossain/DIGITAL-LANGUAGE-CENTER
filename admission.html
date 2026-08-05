@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Admission | Digital Language Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Dynamically injected header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Admission Hero -->
+  <section class="admission-hero">
+    <div class="admission-hero-content">
+      <h1>Apply for Admission</h1>
+      <p>Fill out the form below to begin your language learning journey.</p>
+    </div>
+  </section>
+
+  <!-- Admission Form Section -->
+  <section class="admission-section">
+    <div class="admission-container">
+      <form class="modern-form" id="admission-application-form">
+        <h2>Student Information</h2>
+        
+        <div class="form-row">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+          </div>
+          <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" required class="modern-select">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="example@email.com" required>
+          </div>
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+88017xxxxxxxx" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Select Course</label>
+          <select required class="modern-select">
+            <option value="">-- Choose a Language Course --</option>
+            <option value="arabic">Arabic Language</option>
+            <option value="english">English Language</option>
+            <option value="korean">Korean Language</option>
+            <option value="japanese">Japanese Language</option>
+            <option value="chinese">Chinese Language</option>
+            <option value="spanish">Spanish Language</option>
+            <option value="malay">Malay Language</option>
+          </select>
+        </div>
+
+        <!-- Passport Toggle -->
+        <div class="passport-toggle-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="passport-yes">
+            <span class="custom-checkbox"></span>
+            I have a valid Passport
+          </label>
+        </div>
+
+        <!-- Hidden Passport Details -->
+        <div id="passport-details" class="hidden-passport-section">
+          <h3>Passport Details</h3>
+          <div class="form-row">
+            <div class="input-group">
+              <label>Passport Number</label>
+              <input type="text" placeholder="e.g. A1234567" id="passport-no">
+            </div>
+            <div class="input-group">
+              <label>Nationality</label>
+              <input type="text" placeholder="e.g. Bangladeshi" id="nationality">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label>Date of Issue</label>
+              <input type="date" class="modern-select" id="passport-issue">
+            </div>
+            <div class="input-group">
+              <label>Date of Expiry</label>
+              <input type="date" class="modern-select" id="passport-expiry">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">Submit Application <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>

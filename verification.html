@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verification Portal - DLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <!-- Verification Portal Hero -->
+  <section class="verification-hero">
+    <h1>Verification Portal</h1>
+    <p>Securely verify your certificates, results, and admission status online.</p>
+  </section>
+
+  <!-- Portal Container -->
+  <section class="portal-section">
+    <div class="portal-container">
+      
+      <!-- Selection Grid -->
+      <div class="verify-options" id="verify-options">
+        <div class="verify-card active" data-target="certificate-form">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Certificate</h3>
+          <p>Verify course completion certificates.</p>
+        </div>
+        <div class="verify-card" data-target="result-form">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Result</h3>
+          <p>Check student exam results.</p>
+        </div>
+        <div class="verify-card" data-target="admission-form">
+          <i class="fa-solid fa-id-card"></i>
+          <h3>Admission</h3>
+          <p>Verify student admission status.</p>
+        </div>
+      </div>
+
+      <!-- Forms Container -->
+      <div class="verify-forms-wrapper" id="verify-forms">
+        
+        <!-- Certificate Form -->
+        <form class="verify-form active" id="certificate-form">
+          <h2>Certificate Verification</h2>
+          <div class="input-group">
+            <label>Certificate ID / Registration No.</label>
+            <input type="text" id="cert-id" placeholder="e.g. DLC-CERT-2023-1234" required>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Verify Certificate <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Result Form -->
+        <form class="verify-form" id="result-form">
+          <h2>Result Verification</h2>
+          <div class="input-group">
+            <label>Registration Number</label>
+            <input type="text" id="reg-no" placeholder="Enter Registration Number" required>
+          </div>
+          <div class="input-group">
+            <label>Student Roll Number</label>
+            <input type="text" id="roll-no" placeholder="Enter Roll Number" required>
+          </div>
+          <div class="input-group">
+            <label>Exam Session</label>
+            <select id="exam-session" required class="modern-select">
+              <option value="">Select Session</option>
+              <option value="Spring 2023">Spring 2023</option>
+              <option value="Fall 2023">Fall 2023</option>
+              <option value="Spring 2024">Spring 2024</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Exam Date</label>
+            <input type="date" id="exam-date" required class="modern-select">
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Check Result <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Admission Form -->
+        <form class="verify-form" id="admission-form">
+          <h2>Admission Verification</h2>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="student-name" placeholder="Enter Student Name" required>
+          </div>
+          <div class="input-group">
+            <label>Valid Phone Number</label>
+            <input type="tel" id="student-phone" placeholder="e.g. +88017xxxxxxxx" required>
+          </div>
+          <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required class="modern-select">
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Verify Admission <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+      </div>
+
+      <!-- Dynamic Result Container -->
+      <div id="verification-result" class="verification-result hidden">
+          <!-- JS will inject result here -->
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>
