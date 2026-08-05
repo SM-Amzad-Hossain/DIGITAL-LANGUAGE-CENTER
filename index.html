@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="DSC_1882 0.jpg" type="image/x-icon">
 </head>
@@ -59,6 +60,8 @@
       </ul>
     </nav>
   </div>
+
+
 
   <!-- Hero Carousel Section -->
   <section class="hero-carousel" id="hero-carousel">
@@ -157,68 +160,20 @@
       <span class="dot" data-slide="6"></span>
     </div>
   </section>
-  <script>
-    // Mobile menu toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
-
-    mobileMenu.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      mobileMenu.classList.toggle('is-active');
-    });
-
-    // Carousel Logic
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    let currentSlide = 0;
-    let slideInterval;
-
-    function goToSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-
-      currentSlide = (index + slides.length) % slides.length;
-
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-
-    function nextSlide() {
-      goToSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-      goToSlide(currentSlide - 1);
-    }
-
-    function startSlideShow() {
-      slideInterval = setInterval(nextSlide, 5000); // 5 seconds
-    }
-
-    function resetSlideShow() {
-      clearInterval(slideInterval);
-      startSlideShow();
-    }
-
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      resetSlideShow();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      resetSlideShow();
-    });
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-        resetSlideShow();
-      });
-    });
-
-    startSlideShow();
-  </script>
+    <!-- Notice Bar Section -->
+  <div class="notice-bar">
+    <div class="notice-date-time">
+      <div class="time-part"><span id="time"></span></div>
+      <div class="date-part"></i> <span id="date"></span></div>
+    </div>
+    <div class="notice-scrolling">
+      <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+        <i class="fa-solid fa-bullhorn"></i> Welcome to Digital Language Center! Admissions are open for the new session. &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-star" style="color: #f1c40f;"></i> Special discount on Korean Language Course this month! &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-graduation-cap"></i> New batches starting soon!
+      </marquee>
+    </div>
+    <div class="notice-link">
+      <a href="#">Notices</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
